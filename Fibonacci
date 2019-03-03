@@ -1,0 +1,62 @@
+
+#include <iostream>
+using namespace std;
+
+int run= 0;
+
+int fibonacci(int n)
+{
+    int A = 1;
+	int B = 2;
+	int C = 0;
+	int D = 0;
+	
+	while ( D <= n-4)
+	{
+		C = A + B;
+		A = B;
+		B = C;
+		D++;
+		
+	}
+ 
+	cout << B;
+	run = B;
+	return 0;
+}
+
+int fibonacciSum(int n)
+{
+	
+	int A = 1;
+	int B = 2;
+	int C = 0;
+	int total=0;
+	
+	while (B <= run)
+	{
+		C = A + B;
+		total += B;
+		A = B;
+		B = C;
+	}
+ 
+	cout << total+2;
+ 
+	return 0;
+}
+
+
+
+
+int main()
+{
+    int n;
+    cout <<"enter Fn:  "; 
+    cin >> n;
+    cout<<"The value of this Fibonacci number is: ";
+    fibonacci(n);
+    cout << "   The sum of the first " << n << " Fibonacci numbers is: ";
+    fibonacciSum(n);
+}
+
